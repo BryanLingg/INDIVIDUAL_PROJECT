@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Personal Info</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+    body, html {
+      height: 100%; 
+      color: black; 
+      line-height: 1.8;
+      background-color: #E7EFFA;
+    }
+
+    .bgimg-1, .bgimg-2 {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .bgimg-1 {
+      background-image: url('PICTURE/backgroud1.jpeg');
+      min-height: 50%;
+    }
+
+    .bgimg-2 {
+      background-image: url('PICTURE/Pokemon.png');
+      min-height: 400px;
+    }
+
+    .bgimg-3 {
+      background-image: url('PICTURE/Tool.jpg');
+      min-height: 400px;  
+    }
+
+    .w3-wide {letter-spacing: 10px;}
+    .w3-hover-opacity {cursor: pointer;}
+
+    @media only screen and (max-device-width: 1600px) {
+      .bgimg-1, .bgimg-2, .bgimg-3 {background-attachment: scroll;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#cv" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CV</a>
+    <a href="#tool" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> TOOL</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-hover-text-black">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#cv" class="w3-bar-item w3-button" onclick="toggleFunction()">MY CV</a>
+    <a href="#tool" class="w3-bar-item w3-button" onclick="toggleFunction()">TOOL</a>
+  </div>
+</div>
+
+<!-- First Section -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">PERSONAL</span> PROFILE</span>
+  </div>
+</div>
+
+<!-- About Me -->
+ <div class="w3-content w3-container w3-padding-64" id="about">
+   <h1 class="w3-center">About Me</h1>
+   <div class="w3-col m6 w3-center w3-padding-large">
+     <p><b><i class="fa fa-user w3-margin-right"></i>My Photo</b></p><br>
+     <img src="PICTURE/my_picture2.jpg" class="w3-round w3-image" alt="Photo of Me" width="300" height="255">
+   </div>
+
+  <div class="w3-col m6 w3-padding-large">
+    <p><strong>Name:</strong> Bryan Ling Zhong Soon</p>
+    <p><strong>Matric No:</strong> A24DW0124</p>
+    <p><strong>Program:</strong> Diploma in Computer Science</p>
+    <p><strong>Section:</strong> 42</p></a>
+    <p><strong>University:</strong><a href ="https://www.utm.my/">University Technology Malaysia</p></a>
+    <p><strong>Email:</strong> bryanling2006@Gmail.com</p>
+  </div>
+</div>
+
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-padding-large w3-xxlarge w3-text-black w3-wide w3-animate-opacity">DAILY <span class="w3-hide-small">LIFE</span>
+  </div>
+</div>
+
+<br>
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <p class="w3-center"><em>Click on the images to make them bigger</em></p><br>
+
+  <div class="w3-row-padding w3-center">
+      <div class="w3-col m3">
+        <img src="PICTURE/alpaca.jpg" style="width: 200px;" onclick="onClick(this)" class="w3-hover-opacity" alt="Playing with alpaca at the pet cafe">
+      </div>
+
+      <div class="w3-col m3">
+        <img src="PICTURE/cat.jpg" style="width: 200px;" onclick="onClick(this)" class="w3-hover-opacity" alt="cat in hometown">
+      </div>
+
+      <div class="w3-col m3">
+        <img src="PICTURE/desaru.jpg" style="width: 200px;" onclick="onClick(this)" class="w3-hover-opacity" alt="Desaru">
+      </div>
+
+      <div class="w3-col m3">
+      <img src="PICTURE/Secondary_School.jpg" style="width: 200px;" onclick="onClick(this)" class="w3-hover-opacity" alt="Secondary School">
+      </div>
+   </div>
+
+    <div class="w3-row-padding w3-center w3-section">
+      <div class="w3-col m3">
+        <img src="PICTURE/sea.jpg" style="width: 200px;" onclick="onClick(this)" class="w3-hover-opacity" alt="Looking Sunshine">
+      </div>
+
+      <div class="w3-col m3">
+        <img src="PICTURE/Archery.jpg" style="width: 200px;" onclick="onClick(this)" class="w3-hover-opacity" alt="Playing Archery">
+      </div>
+
+      <div class="w3-col m3">
+        <img src="PICTURE/Pokemon_PTCG.jpg" style="width: 200px;" onclick="onClick(this)" class="w3-hover-opacity" alt="Pokemon PTCG">
+      </div>
+
+      <div class="w3-col m3">
+        <img src="PICTURE/Vesak_day.jpg" style="width: 200px;" onclick="onClick(this)" class="w3-hover-opacity" alt="Vesak day">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- CV Section -->
+
+<div class="w3-container w3-padding-64" id="cv">
+  <h2 class="w3-center">My CV LINKS</h2>
+  <div class="w3-center w3-margin-top">
+    <a href="cv.html" class="w3-button w3-border w3-border-black w3-text-black 3-large"><i class="fa fa-eye"></i> View CV (HTML)</a>
+    <a href="BRYANCV.pdf" class="w3-button w3-border w3-border-black w3-text-black" download><i class="fa fa-download"></i> Download CV (PDF)</a>
+  </div>
+</div>
+
+<!-- Tool Section -->
+
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="tool">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-padding-large w3-xxlarge w3-text-white w3-wide w3-animate-opacity">TOOL</span>
+  </div>
+</div>
+
+<div class="w3-container w3-padding-32" id="tools">
+  <h2 class="w3-center">My Web Tools</h2>
+  <p class="w3-center">Let try to use:</p>
+  <div class="w3-center w3-margin-top">
+    <a href="Tools.html" class="w3-button w3-hover-grey w3-xlarge w3-border w3-border-black">
+      Go to Tools Page
+    </a>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-32 ">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/share/169f2R29eh/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/ling.bryan.16"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href ="https://www.linkedin.com/in/bryan-ling-zhong-soon-6888a6294/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  </div>
+  <p>© 2025 Bryan Ling Zhong Soon | DSPD 1703 Web Programming</p>
+  <p>Matric: AD20DW124 | Section: 42</p>
+</footer>
+
+<script>
+  function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+  }
+
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+      var navbar = document.getElementById("myNavbar");
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+      } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+      }
+  }
+</script>
+
+</body>
+</html>

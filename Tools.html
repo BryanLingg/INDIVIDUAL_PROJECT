@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Tools Page</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Lato", sans-serif;
+    }
+    body{
+      background-color: #E7EFFA;
+    }
+    .tool-box {
+      max-width: 1200px;
+      margin: auto;
+      padding: 30px;
+    }
+    .tool-card {
+      transition: transform 0.3s;
+    }
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .tool-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 20px;
+    }
+    .w3-button {
+      margin: 10px;
+      width: 250px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="w3-container w3-teal w3-center w3-padding-32">
+  <h1>My Tools Page</h1>
+  <p>Select a tool to use</p>
+</div>
+
+<!-- Tool Cards -->
+<div class="w3-container w3-padding-64 tool-box">
+  <div class="w3-row-padding w3-center">
+    <div class="w3-quarter">
+      <div class="w3-card w3-white tool-card w3-padding-32">
+        <i class="fa fa-plus-square tool-icon"></i>
+        <p class="w3-large">Calculator</p>
+        <a href="Tool_calculator.html" class="w3-button w3-teal">Open</a>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="w3-card w3-white tool-card w3-padding-32">
+        <i class="fa fa-heartbeat tool-icon"></i>
+        <p class="w3-large">BMI Checker</p>
+        <a href="Tool_bmi.html" class="w3-button w3-teal">Open</a>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="w3-card w3-white tool-card w3-padding-32">
+        <i class="fa fa-money tool-icon"></i>
+        <p class="w3-large">Tax Calculator</p>
+        <a href="Tool_tax.html" class="w3-button w3-teal">Open</a>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="w3-card w3-white tool-card w3-padding-32">
+        <i class="fa fa-exchange tool-icon"></i>
+        <p class="w3-large">Unit Converter</p>
+        <a href="Tool_unit.html" class="w3-button w3-teal">Open</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Back Links -->
+<div class="w3-container w3-center">
+  <a href="PersonalInfo.html" class="w3-button w3-light-grey w3-border w3-border-black">Back to Personal Info</a>
+  <a href="main.html" class="w3-button w3-light-grey w3-border w3-border-black">Back to Main Page</a>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-black w3-padding-32">
+    <p>© 2025 Bryan Ling Zhong Soon</p>
+  </footer>
+
+</body>
+</html>

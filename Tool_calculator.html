@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tool - Calculator</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+      background-color: #E7EFFA;
+    }
+
+    .calc-box {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .w3-button {
+      margin: 5px 10px;
+    }
+
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function calculate(operation) {
+      var input1 = document.getElementById("numberInput1").value;
+      var input2 = document.getElementById("numberInput2").value;
+      var number1 = parseFloat(input1);
+      var number2 = parseFloat(input2);
+      var result;
+
+      if (isNaN(number1) || isNaN(number2)) {
+        document.getElementById("result").innerText = "Please enter valid numbers.";
+        return;
+      }
+
+      switch(operation) {
+        case 'add':
+          result = number1 + number2;
+          break;
+        case 'subtract':
+          result = number1 - number2;
+          break;
+        case 'multiply':
+          result = number1 * number2;
+          break;
+        case 'divide':
+          if (number2 === 0) {
+            document.getElementById("result").innerText = "Cannot divide by 0.";
+            return;
+          }
+          result = number1 / number2;
+          break;
+        default:
+          result = "Invalid operation";
+      }
+
+      document.getElementById("result").innerText = "Result: " + result;
+    }
+
+    function clearFields() {
+      document.getElementById('numberInput1').value = "";
+      document.getElementById('numberInput2').value = "";
+      document.getElementById('result').innerText = "";
+    }
+  </script>
+</head>
+<body>
+
+<div class="calc-box w3-container w3-card-4">
+  <h2 class="w3-center"><i class="fa fa-plus-square"></i> Simple Calculator</h2>
+
+  <label>Enter Number 1:</label>
+  <input class="w3-input w3-border" type="text" id="numberInput1"><br>
+
+  <label>Enter Number 2:</label>
+  <input class="w3-input w3-border" type="text" id="numberInput2"><br>
+
+  <div class="w3-center">
+    <button class="w3-button w3-blue" onclick="calculate('add')">Add</button>
+    <button class="w3-button w3-green" onclick="calculate('subtract')">Subtract</button>
+    <button class="w3-button w3-yellow" onclick="calculate('multiply')">Multiply</button>
+    <button class="w3-button w3-red" onclick="calculate('divide')">Divide</button>
+    <button class="w3-button w3-grey" onclick="clearFields()">Clear</button>
+  </div>
+
+  <p class="w3-center" id="result"></p>
+
+  <div class="w3-center w3-margin-top">
+    <a href="Tools.html" class="w3-button w3-light-grey w3-border w3-border-black">
+      <i class="fa fa-arrow-left"></i> Back to Tools
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
